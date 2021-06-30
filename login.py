@@ -4,7 +4,6 @@ from PIL import Image, ImageTk, ImageDraw #pip install pillow
 from datetime import *
 import time
 from math import *
-#import pymysql
 import sqlite3
 import os
 from tkinter import messagebox,ttk
