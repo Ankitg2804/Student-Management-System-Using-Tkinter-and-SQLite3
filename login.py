@@ -1,9 +1,6 @@
 from tkinter import * 
 from pathlib import WindowsPath
 from PIL import Image, ImageTk, ImageDraw #pip install pillow
-from datetime import *
-import time
-from math import *
 import sqlite3
 import os
 from tkinter import messagebox,ttk
