@@ -2,7 +2,6 @@ from tkinter import *
 from tkinter import ttk, messagebox
 from PIL import Image, ImageTk #pip install pillow
 import sqlite3
-#import pymysql   #pip install pymysql
 class Register:
     def __init__(self,root):
         self.root=root
@@ -74,7 +73,6 @@ class Register:
         self.var_chk=IntVar()
         chk=Checkbutton(frame1, text="I agree the Terms & Conditions",variable=self.var_chk,onvalue=1, offvalue=0,bg="#FFE6EE",font=("goudy old style",12)).place(x=50,y=380)
 
-        # self.btn_img=ImageTk.PhotoImage(file="registerbutton.jpg")
         btn_register=Button(frame1,text="REGISTER",bg="lightgreen", activebackground="lightgreen",font=("goudy old style",20),cursor="hand2",command=self.register_data).place(x=80,y=420, width=250)
 
         btn_login=Button(frame1,text="SIGN IN",bg="lightblue", activebackground="lightblue",font=("goudy old style",20),cursor="hand2",command=self.login_window).place(x=350,y=420, width=180)
