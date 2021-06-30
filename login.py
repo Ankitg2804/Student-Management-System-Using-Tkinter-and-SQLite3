@@ -16,13 +16,9 @@ class login_window:
         self.root.geometry("1300x700+0+0")
         self.root.config(bg="#021e2f")
 
-
         #----------Background Colours
         left_lbl=Label(self.root, bg="#6e93d6", bd=0)
         left_lbl.place(x=0, y=0,relheight=1, width=2500)
-
-        # right_lbl=Label(self.root, bg="#031F3C", bd=0)
-        # right_lbl.place(x=1150, y=0,relheight=1, relwidth=1)
         
         #---------Frames-------
         login_frame=Frame(self.root,bg="#031F3C")
@@ -147,42 +143,6 @@ class login_window:
                 con.close()
             except Exception as es:
                 messagebox.showerror("Error",f"Error due to: {str(es)}", parent=self.root)
-
-
-    # def clock_image(self,hr,min_,sec_):
-    #     clock=Image.new("RGB",(400,400),(8,25,35))
-    #     draw=ImageDraw.Draw(clock)
-
-    #     #------For Clock Image
-    #     # bg=Image.open("cl.jpg")
-    #     # bg=bg.resize((300,300), Image.ANTIALIAS)
-    #     # clock.paste(bg,(50,50))
-
-    #     #-------------Hour Line Image-----
-    #     origin=200,200
-    #     draw.line((origin,200+50*sin(radians(hr)),200-50*cos(radians(hr))),fill="black",width=4)
-
-    #     #----------Min Line Image----------
-    #     draw.line((origin,200+80*sin(radians(min_)),200-80*cos(radians(min_))),fill="white", width=3)
-        
-    #     #-----------Sec Line Image
-    #     draw.line((origin,200+100*sin(radians(sec_)),200-100*cos(radians(sec_))),fill="yellow", width=2)
-    #     draw.ellipse((195,195,210,210),fill="gray")
-    #     # clock.save("clock_new.jpg")
-    
-    # def working(self):
-    #     h = datetime.now().time().hour
-    #     m = datetime.now().time().minute
-    #     s = datetime.now().time().second
-
-    #     hr=(h/12)*360
-    #     min_=(m/60)*360
-    #     sec_=(s/60)*360
-
-    #     self.clock_image(hr,min_,sec_)
-    #     self.img=ImageTk.PhotoImage(file="Image/clock_new.jpg")
-    #     self.lbl.config(image=self.img)
-    #     self.lbl.after(200,self.working)
 
 root=Tk()
 obj=login_window(root)
